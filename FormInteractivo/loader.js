@@ -1,9 +1,3 @@
-function app(){
+import { App } from './app.js'
 
-    var formulario = document.querySelector('#formulario');
-
-        formulario.classList.toggle('hide');
-    
-    
-}
-document.querySelector('#mas').addEventListener('change', app)
+document.addEventListener('DOMContentLoaded', () => {new App()})

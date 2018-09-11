@@ -6,36 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formulario interactivo</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./loader.js"></script>
+    <script src="./loader.js" type="module"></script>
 </head>
 <body>
     <h1>Formulario interactivo</h1>
-    <form action="">
+    <form action="" id="formInicio">
         <div class="option-group">
             <input type="checkbox" name="mas" id="mas">
             <label for="mas">Deseo más informacion</label>
         </div>
     </form>
-    <form action="" class="hide" id="formulario">
-        <fieldset>
-            <legend>Datos personales</legend>
-            <div class="control-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre">
-            </div>
-            <div class="control-group">
-                <label for="apellido">Apellidos</label>
-                <input type="text" name="apellido" id="apellido">
-            </div>
-            <div class="control-group">
-                <label for="correo">Correo</label>
-                <input type="email" name="correo" id="correo">
-            </div>
-            <div class="control-group">
-                <label for="passw">Contraseña</label>
-                <input type="password" name="passw" id="passw">
-            </div>           
-        </fieldset>
+    <form action="" class="hide" id="formFinal">
+        <div class="control-group">
+            <label for="genero">Genero</label>
+            <select name="genero" id="genero">
+            </select>
+        </div>
     </form>
 </body>
 </html>
