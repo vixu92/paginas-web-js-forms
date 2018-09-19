@@ -1,23 +1,23 @@
+
 import { FILE } from './config.js'
+import { AjaxService } from './ajax-service.js';
 
-function main () {
-    document.querySelector('#btnDatos')
-    .addEventListener('click', pedirDatos)
+export class App {
+    constructor () {
+        this.ndBtnDatos = document.querySelector('#btnDatos')
+        this.ndOutput = document.querySelector('#output')
 
-    /* document.querySelector('#btnDatos')
-        .onclick = pedirDatos*/
+        this.ndBtnDatos.addEventListener('click', 
+            this.pedirDatos.bind(this))
+    }
 
-
-
+    pedirDatos(){
+        new AjaxService('GET', FILE)
+    }
+}
+  
     function pedirDatos() {
         console.dir(FILE)
-
-        let ajax = new XMLHttpRequest()
-        console.dir(ajax)
-        ajax.onreadystatechange = mostrarDatos
-
-        ajax.open('GET','datos.json')
-        ajax.send(null)
 
         function mostrarDatos() {
             console.log(ajax.readyState)
@@ -43,12 +43,8 @@ function main () {
                     document.querySelector('#output')
                     .innerHTML = ajax.status + ' : ' +
                     ajax.statusText
-                }
-                 
+                } 
             }
         }
-
     }
-}
 
-document.addEventListener('DOMContentLoaded', main)

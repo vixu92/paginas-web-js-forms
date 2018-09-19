@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ajax</title>
+    <title>API Propio</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" type="module"></script>
 </head>
 <body>
-    <h1>Pedir datos AJAX</h1>
-    <div>
-        <a href="datos.txt">Cargar datos</a>
+    <header><h1>Tareas</h1></header>
+    <form action="">
+        <input id="tarea" type="text" placeholder="Nueva tarea">
+        <button id="btnAdd" type="button">Añadir</button>
+    </form>
+    <div class="tareas">
+        <ul class="tareas" id="lista"></ul>
     </div>
-    <div>
-        <button type="button" id="btnDatos">Pedir datos</button>
-    </div>
-    <p id="output" class="output"></p>
 </body>
 </html>
