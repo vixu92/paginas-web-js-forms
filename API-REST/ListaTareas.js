@@ -11,6 +11,9 @@ export class ListaTareas {
 
     getTareas() {
         new FetchService({url:this.uRL, method: 'GET' })
+
+
+        
             .get()
             .then( data => {
                 this.aTareas = data
